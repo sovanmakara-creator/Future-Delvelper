@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future Developer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    header {
+      background: transparent;
+      color: #38bdf8;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      animation: fadeIn 1.5s ease;
+    }
+    nav {
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      width: fit-content;
+      margin: 0 auto;
+      animation: slideDown 1.2s ease;
+    }
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #38bdf8;
+      transform: scale(1.1);
+    }
+    .hero {
+      height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e3a8a, #0f172a);
+      color: white;
+      padding: 20px;
+      animation: fadeIn 2s ease;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.3rem;
+      opacity: 0.85;
+    }
+    .section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease;
+    }
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      transition: 0.4s;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+      border-color: #38bdf8;
+    }
+    button {
+      padding: 14px 22px;
+      border: none;
+      border-radius: 10px;
+      background: #38bdf8;
+      color: #0f172a;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #0ea5e9;
+      transform: translateY(-3px);
+    }
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      margin-top: 60px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes slideDown {
+      0% { transform: translateY(-20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Future Developer</h1>
+    <p>We Build, We Innovate, We Create the Future</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h1>Welcome to Future Developer</h1>
+      <p>Empowering young developers to create real-world solutions.</p>
+      <button onclick="showMessage()">Join Us</button>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>We are a passionate team of aspiring developers dedicated to learning, coding, and solving modern problems using technology.</p>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>Our Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Building responsive and modern websites using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="card">
+        <h3>Cloud Computing</h3>
+        <p>Deploying applications and learning cloud services like AWS and Azure.</p>
+      </div>
+      <div class="card">
+        <h3>Mobile Apps</h3>
+        <p>Creating simple and effective mobile applications for users.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: futuredeveloper.team@gmail.com</p>
+    <p>Facebook: Future Developer</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Future Developer Team. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("Thank you for your interest! Our team will contact you soon.");
+    }
+  </script>
+</body>
+</html>
